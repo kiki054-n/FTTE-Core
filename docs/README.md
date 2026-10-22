@@ -59,16 +59,30 @@ Theory: 125 tetra + 12 joints = space packing, 2/3 strain → ω
 FTTE Power Estimate - Topological Phase Transducer
 ================================================
 Moiré period L = 13.05 nm, area = 147.51 nm^2
+
 Gap Δ = 55.0 meV, Asym δ = -0.06 eV (Li 0.12 / F -0.18)
+
 Chern imbalance ~ 0.109
+
 sigma_AH = 4.226e-06 S
+
 Effective E = 4.60e+06 V/m
+
 I per edge = 253.57 nA
+
 Power per moiré cell:
+
   AHE model: 15214.435 pW
+  
   Strain 2/3 model @10THz: 59397937.795 pW
+  
 Scale:
+
   Cells/cm2 = 6.78e+11
+  
   Power/cm2 AHE = 10314409.294 mW/cm2
+  
   Power/cm2 strain = 40267985956.445 mW/cm2
+  
 Note: Ideal upper bound, no disorder, no contact resistance.
+
