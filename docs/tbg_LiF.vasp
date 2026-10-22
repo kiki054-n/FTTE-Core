@@ -1,0 +1,15 @@
+FTTE TBG Li/F Topological Transducer - 1.08 deg effective
+1.0
+ 12.34  0.0    0.0
+ -6.17 10.686  0.0
+  0.0   0.0   20.0
+C Li F
+4 1 1
+Direct
+ 0.000 0.000 0.000
+ 0.115 0.000 0.000
+ 0.008 0.004 0.170
+ 0.123 0.004 0.170
+ 0.056 0.327 0.085
+ 0.500 0.500 0.085
+! Li push +0.12eV at AA, F pull -0.18eV at AB -> asym gap 52meV

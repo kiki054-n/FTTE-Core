@@ -1,0 +1,23 @@
+! FTTE Wannier90 for Berry curvature - Dream Band
+num_wann = 8
+num_bands = 32
+dis_win_min = -1.0
+dis_win_max = 1.0
+dis_froz_min = -0.2
+dis_froz_max = 0.2
+begin projections
+C:pz
+Li:s
+F:p
+end projections
+begin kpoints
+0.0 0.0 0.0
+0.5 0.0 0.0
+0.0 0.5 0.0
+0.5 0.5 0.0
+end kpoints
+mp_grid = 12 12 1
+berry = true
+berry_task = ahc
+berry_kmesh = 100 100 1
+! FTTE: Calculate anomalous Hall from asymmetric Li/F -> spontaneous ω

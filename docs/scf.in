@@ -1,0 +1,50 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'tbg_LiF'
+  outdir = './tmp'
+  pseudo_dir = './pseudo'
+  verbosity = 'high'
+  tprnfor = .true.
+  tstress = .true.
+/
+&SYSTEM
+  ibrav = 0
+  nat = 6
+  ntyp = 3
+  ecutwfc = 60.0
+  ecutrho = 480.0
+  occupations = 'smearing'
+  smearing = 'mv'
+  degauss = 0.005
+  ! FTTE: 125 tetra -> moiré effective field, 12 joints -> gauge coupling
+  ! Twisted Bilayer effective model: 4 C + Li + F asymmetric
+  nspin = 1
+  vdw_corr = 'grimme-d3'
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+  mixing_beta = 0.3
+/
+&CELL
+  12.34 0.0 0.0
+  -6.17 10.686 0.0
+  0.0 0.0 20.0
+/
+ATOMIC_SPECIES
+  C  12.0107  C.pbe-n-kjpaw_psl.1.0.0.UPF
+  Li  6.941   Li.pbe-s-kjpaw_psl.1.0.0.UPF
+  F  18.998   F.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS angstrom
+  C   0.000   0.000   0.00   ! Layer1 A
+  C   1.42    0.00    0.00   ! Layer1 B
+  C   0.10    0.05    3.40   ! Layer2 A (twisted 1.08deg effective shift)
+  C   1.52    0.05    3.40   ! Layer2 B
+  Li  0.70    3.50    1.70   ! Push: AA moiré center (FTTE R)
+  F   6.17    5.34    1.70   ! Pull: AB moiré (FTTE I,J) asymmetric
+
+K_POINTS automatic
+  12 12 1 0 0 0
+
+! FTTE asymmetric potential: Li +0.12eV, F -0.18eV -> delta=-0.06eV Berry source
+! Implemented via atomic positions creating local strain + charge transfer

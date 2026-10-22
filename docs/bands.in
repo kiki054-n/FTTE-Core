@@ -1,0 +1,6 @@
+&BANDS
+  prefix = 'tbg_LiF'
+  outdir = './tmp'
+  filband = 'tbg_LiF.bands.dat'
+  lsym = .false.
+/
