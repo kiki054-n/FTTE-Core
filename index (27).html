@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FTTE-Core</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0e1a;
+  --ink: #e8e6f0;
+  --muted: #8a8da8;
+  --accent: #d4a853;
+  --line: rgba(255,255,255,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 30px 40px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 80px 120px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 150px 60px, rgba(255,255,255,0.18), transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 0;
+}
+.wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.3rem;
+}
+.tagline {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 2rem;
+  opacity: 0.6;
+}
+.description {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 2;
+  margin-bottom: 2.5rem;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 240px;
+  padding: 0.9em 1.5em;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.link-btn:hover { transform: translateY(-2px); }
+.link-btn.primary {
+  background: linear-gradient(135deg, var(--accent), #c49440);
+  color: var(--bg);
+}
+.link-btn.secondary {
+  background: rgba(255,255,255,0.05);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.footer {
+  position: absolute;
+  bottom: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.5;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="logo">FTTE-Core</div>
+    <div class="tagline">Fractal Tri-Tetra Energy</div>
+    <div class="divider"></div>
+    <p class="description">
+      真の万物の理論（Theory of Everything）<br>
+      空間と物質の幾何学的束と、意識と倫理の精神次元を統合する<br>
+      Dream-filled Energy
+    </p>
+    <div class="links">
+      <a href="FTTE-Core_index.html" class="link-btn primary">理論を読む</a>
+      <a href="https://github.com/kiki054-n/FTTE-Core" class="link-btn secondary" target="_blank" rel="noopener">GitHub リポジトリ</a>
+    </div>
+  </div>
+  <div class="footer">Dream-filled Energy</div>
+</body>
+</html>
